@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post } from '@nestjs/common';
 import { AppService } from '../service/app.service';
 import { AppNotService } from '../service/app.not.service';
 
@@ -9,13 +9,18 @@ export class AppController {
     private readonly appNotService: AppNotService,
   ) {}
 
-  @Get()
+  @Get('dsaf')
   getHello(): string {
     return this.appService.getHello();
   }
 
-  @Get('/not')
+  @Post('/not2')
   getNotHello(): string {
     return this.appNotService.getNotHello();
+  }
+
+  @Get('/hi')
+  getHi(): string {
+    return this.appService.getHi();
   }
 }

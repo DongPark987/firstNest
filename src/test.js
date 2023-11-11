@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { setTimeout } = require('timers');
 
 function sleep(ms) {
@@ -9,7 +10,6 @@ const foo = async () => {
     new Promise((resolve) => {
       setTimeout(resolve, timeToDelay);
       console.log(resolve);
-
 
       for (let i = 0; i < 10; i++) {
         console.log(i);
