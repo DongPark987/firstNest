@@ -19,8 +19,4 @@ export class AppController {
     return this.appNotService.getNotHello();
   }
 
-  @Get('/hi')
-  getHi(): string {
-    return this.appService.getHi();
-  }
 }
