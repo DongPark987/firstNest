@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { AppController } from './controller/app.controller';
 import { AppService } from './service/app.service';
+import { AppController } from './app.controller';
 
 describe('AppController', () => {
   let appController: AppController;
@@ -15,8 +15,8 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello).toBe('Not Hello World!!!!!!!!');
+    it('should return "Welcome to my Movie API"', () => {
+      expect(appController.home()).toBe('Welcome to my Movie API');
     });
   });
 });
